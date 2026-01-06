@@ -89,10 +89,10 @@ Pengelolaan data pengaduan dilakukan melalui endpoint:
 
 ### Contoh endpoint API:
 ```http
-GET /api.php/records/complaints
-POST /api.php/records/complaints
-PUT /api.php/records/complaints/{id}
-DELETE /api.php/records/complaints/{id}
+POST   /api.php/records/complaints        # Create (Tambah Data)
+GET    /api.php/records/complaints        # Read (Lihat Data)
+PUT    /api.php/records/complaints/{id}   # Update (Ubah Data)
+DELETE /api.php/records/complaints/{id}   # Delete (Hapus Data)
 ```
 
 ## 🚀 Cara Pemasangan (Instalasi)
