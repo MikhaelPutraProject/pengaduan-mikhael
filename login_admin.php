@@ -12,7 +12,7 @@ if (isset($_POST['username'], $_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $apiUrl = "https://pengaduanbymikhael.ct.ws/api.php/records/admins?filter=username,eq,$username";
+    $apiUrl = "http://localhost/pengaduan/api.php/records/admins?filter=username,eq,$username";
     $response = file_get_contents($apiUrl);
     $data = json_decode($response, true);
 

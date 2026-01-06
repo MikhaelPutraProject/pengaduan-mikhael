@@ -14,7 +14,7 @@ if (isset($_POST['email'], $_POST['password'])) {
     $password = $_POST['password'];
 
     // Panggil API
-    $apiUrl = "https://pengaduanbymikhael.ct.ws/api.php/records/users?filter=email,eq,$email";
+    $apiUrl = "http://localhost/pengaduan/api.php/records/users?filter=email,eq,$email";
     $response = file_get_contents($apiUrl);
     $data = json_decode($response, true);
 

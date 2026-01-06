@@ -7,7 +7,7 @@ if (!isset($_SESSION['admin_id'])) {
 }
 
 $admin_id = $_SESSION['admin_id'];
-$apiBase = "https://pengaduanbymikhael.ct.ws/api.php";
+$apiBase = "http://localhost/pengaduan/api.php";
 $message = "";
 
 // ================== UPDATE STATUS ==================

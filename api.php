@@ -12785,11 +12785,11 @@ namespace Tqdev\PhpCrudApi {
     // ]);
     $config = new Config([
         // 'driver' => 'mysql',
-        'address'  => 'sql308.infinityfree.com',
+        // 'address' => 'localhost',
         // 'port' => '3306',
-        'username' => 'if0_40319321',
-        'password' => 'm1AFUzIjvDNWUo2',
-        'database' => 'if0_40319321_pengaduan_db',
+        'username' => 'root',
+        'password' => '',
+        'database' => 'pengaduan_db',
         // 'debug' => false
     ]);
     $request = RequestFactory::fromGlobals();

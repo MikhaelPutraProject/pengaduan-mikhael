@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 $message = "";
 
-$apiBase = "https://pengaduanbymikhael.ct.ws/api.php";
+$apiBase = "http://localhost/pengaduan/api.php";
 
 $categoriesJson = file_get_contents($apiBase . "/records/categories");
 $categoriesData = json_decode($categoriesJson, true);

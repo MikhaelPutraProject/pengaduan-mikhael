@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $user_id = $_SESSION['user_id'];
-$apiBase = "https://pengaduanbymikhael.ct.ws/api.php";
+$apiBase = "http://localhost/pengaduan/api.php";
 
 $complaintsJson = file_get_contents(
     $apiBase . "/records/complaints?filter=user_id,eq,$user_id&order=created_at,desc"

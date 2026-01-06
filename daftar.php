@@ -16,7 +16,7 @@ if (isset($_POST['nama'], $_POST['email'], $_POST['password'])) {
     $password = $_POST['password'];
 
     // Cek email sudah ada
-    $cekUrl = "https://pengaduanbymikhael.ct.ws/api.php/records/users?filter=email,eq,$email";
+    $cekUrl = "http://localhost/pengaduan/api.php/records/users?filter=email,eq,$email";
     $cekRes = json_decode(file_get_contents($cekUrl), true);
 
     if (!empty($cekRes['records'])) {
@@ -38,7 +38,7 @@ if (isset($_POST['nama'], $_POST['email'], $_POST['password'])) {
         ];
 
         $context = stream_context_create($opts);
-        file_get_contents("https://pengaduanbymikhael.ct.ws/api.php/records/users", false, $context);
+        file_get_contents("http://localhost/pengaduan/api.php/records/users", false, $context);
 
         $sukses = "Pendaftaran berhasil, silakan login";
     }
