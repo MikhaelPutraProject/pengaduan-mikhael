@@ -18,7 +18,7 @@ $complaints = $complaintsData['records'] ?? [];
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Laporan Saya | Pengaduan By Mikhael</title>
+<title>Laporan Saya | Pengaduan Kota Madiun By Mikhael</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -72,7 +72,7 @@ body {
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand fw-semibold" href="index.php">
-            Pengaduan
+            Pengaduan Kota Madiun
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">

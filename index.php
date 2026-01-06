@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Pengaduan By Mikhael</title>
+    <title>Pengaduan Kota Madiun By Mikhael</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
@@ -44,6 +44,16 @@ if (!isset($_SESSION['user_id'])) {
             line-height: 1.6;
         }
 
+        .city-badge {
+            background: #4f46e5;
+            color: white;
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
         .btn-report {
             background: linear-gradient(135deg, #4f46e5, #6366f1);
             border: none;
@@ -59,11 +69,6 @@ if (!isset($_SESSION['user_id'])) {
             box-shadow: 0 10px 20px rgba(79,70,229,.4);
         }
 
-        .navbar-brand:hover {
-            opacity: 0.85;
-        }
-
-        /* Mobile */
         @media (max-width: 576px) {
             .main-card {
                 margin: 0 10px;
@@ -87,7 +92,7 @@ if (!isset($_SESSION['user_id'])) {
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand fw-semibold" href="index.php">
-            Pengaduan
+            Pengaduan Kota Madiun
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -110,15 +115,16 @@ if (!isset($_SESSION['user_id'])) {
 <!-- CONTENT -->
 <div class="container d-flex align-items-center justify-content-center" style="min-height:85vh;">
     <div class="card main-card text-center p-5 col-lg-6 col-md-8">
-        <h1 class="title mb-3">Laporkan Masalah Anda</h1>
+        <h1 class="title mb-3">Laporkan Permasalahan di Kota Madiun</h1>
 
         <p class="subtitle mb-4">
-            Sampaikan keluhan mengenai fasilitas umum atau pelayanan masyarakat
-            dengan cepat dan mudah.
+            Sampaikan pengaduan terkait fasilitas umum, infrastruktur,
+            lingkungan, dan pelayanan publik di wilayah
+            <strong>Kota Madiun</strong> secara cepat dan mudah.
         </p>
 
         <a href="report.php" class="btn btn-report text-white shadow-sm">
-            Buat Laporan
+            Buat Laporan Pengaduan
         </a>
     </div>
 </div>

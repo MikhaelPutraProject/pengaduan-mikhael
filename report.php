@@ -38,7 +38,7 @@ if (isset($_POST['judul'])) {
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Buat Pengaduan | Pengaduan By Mikhael</title>
+<title>Buat Pengaduan | Pengaduan Kota Madiun By Mikhael</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -107,7 +107,7 @@ body {
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand fw-semibold" href="index.php">
-            Pengaduan
+            Pengaduan Kota Madiun
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -134,9 +134,9 @@ body {
 
     <div class="text-center mb-4">
         <div class="fs-1">📝</div>
-        <div class="report-title">Form Pengaduan</div>
+        <div class="report-title">Pengaduan Masyarakat Kota Madiun</div>
         <p class="text-muted mb-0">
-            Sampaikan keluhan atau laporan Anda dengan jelas
+            Laporkan permasalahan fasilitas umum dan pelayanan publik di wilayah Kota Madiun
         </p>
     </div>
 
@@ -161,12 +161,12 @@ body {
 
         <div class="mb-3">
             <label class="form-label fw-semibold">Judul Pengaduan</label>
-            <input type="text" name="judul" class="form-control" placeholder="Contoh: Jalan rusak depan sekolah" required>
+            <input type="text" name="judul" class="form-control" placeholder="Contoh: Lampu jalan mati di Jalan Pahlawan" required>
         </div>
 
         <div class="mb-4">
             <label class="form-label fw-semibold">Isi Pengaduan</label>
-            <textarea name="isi" rows="5" class="form-control" placeholder="Jelaskan masalah secara detail..." required></textarea>
+            <textarea name="isi" rows="5" class="form-control" placeholder="Jelaskan lokasi dan permasalahan yang terjadi di Kota Madiun secara detail..." required></textarea>
         </div>
 
         <div class="d-flex gap-2 flex-column flex-md-row">

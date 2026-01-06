@@ -48,7 +48,7 @@ if (isset($_POST['nama'], $_POST['email'], $_POST['password'])) {
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Daftar User | Pengaduan By Mikhael</title>
+    <title>Daftar User | Pengaduan Kota Madiun By Mikhael</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">

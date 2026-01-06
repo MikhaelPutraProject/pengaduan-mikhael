@@ -37,7 +37,7 @@ if (isset($_POST['username'], $_POST['password'])) {
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Login Admin | Pengaduan By Mikhael</title>
+    <title>Login Admin | Pengaduan Kota Madiun By Mikhael</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap 5 -->
