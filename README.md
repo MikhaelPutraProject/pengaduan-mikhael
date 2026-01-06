@@ -87,7 +87,7 @@ Database terdiri dari beberapa tabel utama berikut:
 
 Pengelolaan data pengaduan dilakukan melalui endpoint:
 
-Contoh endpoint API:
+### Contoh endpoint API:
 ```http
 GET /api.php/records/reports
 POST /api.php/records/reports
