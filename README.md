@@ -93,3 +93,51 @@ GET /api.php/records/complaints
 POST /api.php/records/complaints
 PUT /api.php/records/complaints/{id}
 DELETE /api.php/records/complaints/{id}
+```
+
+## 🚀 Cara Pemasangan (Instalasi)
+
+Ikuti langkah-langkah berikut untuk menjalankan website **Pengaduan Kota Madiun By Mikhael** secara lokal menggunakan **XAMPP**.
+
+1. **Persiapan Server**
+   - Install **XAMPP**
+   - Jalankan **Apache** dan **MySQL**
+
+2. **Buat Database**
+   - Buka **phpMyAdmin**
+   - Buat database baru dengan nama:
+     ```
+     pengaduan_db
+     ```
+
+3. **Import Database**
+   - Masuk ke database `pengaduan_db`
+   - Pilih menu **Import**
+   - Import file database (`.sql`) yang tersedia pada project
+
+4. **Buat Folder Project**
+   - Masuk ke folder:
+     ```
+     xampp/htdocs/
+     ```
+   - Buat folder baru dengan nama:
+     ```
+     pengaduan
+     ```
+
+5. **Import File Project**
+   - Salin seluruh file project ke dalam folder:
+     ```
+     xampp/htdocs/pengaduan/
+     ```
+
+6. **Jalankan Website**
+   - Buka browser
+   - Akses alamat:
+     ```
+     http://localhost/pengaduan/
+     ```
+     
+### 📌 Catatan Instalasi
+- Pastikan konfigurasi koneksi database pada file PHP sudah sesuai
+- Website ini dibuat untuk **keperluan tugas akademik**, bukan penggunaan produksi
