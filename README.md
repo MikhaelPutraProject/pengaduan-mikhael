@@ -22,7 +22,6 @@ Aplikasi ini memiliki fitur **login**, **dashboard admin**, serta **pengelolaan 
 - **Bootstrap** (UI & Dashboard)
 - **MySQL / MariaDB**
 - **HTML, CSS, JavaScript**
-- **GitHub** (Version Control)
 
 ---
 
