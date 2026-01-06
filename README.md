@@ -81,14 +81,6 @@ Database terdiri dari beberapa tabel utama berikut:
 | `complaints` | Menyimpan data utama pengaduan/laporan yang dikirim pengguna |
 | `complaint_logs` | Menyimpan riwayat atau status perubahan pengaduan |
 
-### 🔗 Relasi Umum Database
-- **users → complaints**  
-  Satu user dapat memiliki banyak pengaduan
-- **categories → complaints**  
-  Setiap pengaduan memiliki satu kategori
-- **complaints → complaint_logs**  
-  Setiap pengaduan memiliki riwayat status
-
 ---
 
 ### 🔄 Konsep CRUD (Create, Read, Update, Delete)
