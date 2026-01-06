@@ -137,7 +137,3 @@ Ikuti langkah-langkah berikut untuk menjalankan website **Pengaduan Kota Madiun 
      ```
      http://localhost/pengaduan/
      ```
-     
-### 📌 Catatan Instalasi
-- Pastikan konfigurasi koneksi database pada file PHP sudah sesuai
-- Website ini dibuat untuk **keperluan tugas akademik**, bukan penggunaan produksi
