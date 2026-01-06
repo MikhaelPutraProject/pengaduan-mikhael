@@ -66,12 +66,38 @@ Berikut adalah halaman-halaman utama pada website:
 
 ## 🗄️ Konsep Database
 
-Website ini menggunakan **PHP CRUD API** sehingga:
-- Tidak memerlukan banyak query manual
-- Data diakses melalui endpoint API
-- Format data menggunakan **JSON**
+Website **Pengaduan By Mikhael** menggunakan **MySQL / MariaDB** sebagai database dan dikelola melalui **PHP CRUD API**.  
+Semua proses pengolahan data (Create, Read, Update, Delete) dilakukan melalui endpoint API dengan format data **JSON**, sehingga aplikasi lebih terstruktur dan mudah dikembangkan.
+
+### 📑 Struktur Tabel Database
+
+Database terdiri dari beberapa tabel utama berikut:
+
+| Tabel | Deskripsi |
+|------|----------|
+| `admins` | Menyimpan data akun admin untuk mengelola dashboard |
+| `users` | Menyimpan data pengguna yang dapat mengirim pengaduan |
+| `categories` | Menyimpan kategori pengaduan (contoh: jalan rusak, sampah, layanan publik) |
+| `complaints` | Menyimpan data utama pengaduan/laporan yang dikirim pengguna |
+| `complaint_logs` | Menyimpan riwayat atau status perubahan pengaduan |
+
+### 🔗 Relasi Umum Database
+- **users → complaints**  
+  Satu user dapat memiliki banyak pengaduan
+- **categories → complaints**  
+  Setiap pengaduan memiliki satu kategori
+- **complaints → complaint_logs**  
+  Setiap pengaduan memiliki riwayat status
+
+---
+
+### 🔄 Konsep CRUD (Create, Read, Update, Delete)
+
+Pengelolaan data pengaduan dilakukan melalui endpoint:
 
 Contoh endpoint API:
 ```http
-GET /api.php/records/users
+GET /api.php/records/reports
 POST /api.php/records/reports
+PUT /api.php/records/reports/{id}
+DELETE /api.php/records/reports/{id}
