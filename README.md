@@ -4,7 +4,7 @@
 **Website:** https://pengaduanbymikhael.ct.ws  
 
 **Deskripsi:**  
-Pengaduan By Mikhael adalah website pengaduan masyarakat yang memudahkan pengguna menyampaikan keluhan terkait fasilitas umum dan pelayanan publik secara cepat, mudah, dan terstruktur.
+Pengaduan Kota Madiun By Mikhael adalah website pengaduan masyarakat yang memudahkan pengguna menyampaikan keluhan terkait fasilitas umum dan pelayanan publik secara cepat, mudah, dan terstruktur.
 
 --------------------------------------------
 
@@ -66,7 +66,7 @@ Berikut adalah halaman-halaman utama pada website:
 
 ## 🗄️ Konsep Database
 
-Website **Pengaduan By Mikhael** menggunakan **MySQL / MariaDB** sebagai database dan dikelola melalui **PHP CRUD API**.  
+Website **Pengaduan Kota Madiun By Mikhael** menggunakan **MySQL / MariaDB** sebagai database dan dikelola melalui **PHP CRUD API**.  
 Semua proses pengolahan data (Create, Read, Update, Delete) dilakukan melalui endpoint API dengan format data **JSON**, sehingga aplikasi lebih terstruktur dan mudah dikembangkan.
 
 ### 📑 Struktur Tabel Database
