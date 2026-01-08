@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2026 at 03:38 PM
+-- Generation Time: Jan 07, 2026 at 01:05 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,11 +38,11 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `username`, `password`) VALUES
-(2, 'admin', 'admin'),
-(3, 'admin2', 'admin123'),
-(4, 'admin3', 'admin123'),
-(5, 'petugas', 'petugas123'),
-(6, 'superadmin', 'super123');
+(1, 'admin', 'admin'),
+(2, 'admin2', 'admin123'),
+(3, 'admin3', 'admin123'),
+(4, 'petugas', 'petugas123'),
+(5, 'superadmin', 'super123');
 
 -- --------------------------------------------------------
 
@@ -60,11 +60,11 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `nama_kategori`) VALUES
-(4, 'Jalan & Infrastruktur'),
-(5, 'Kebersihan'),
-(6, 'Keamanan'),
-(7, 'Pelayanan Publik'),
-(8, 'Fasilitas Umum');
+(1, 'Jalan & Infrastruktur'),
+(2, 'Kebersihan'),
+(3, 'Keamanan'),
+(4, 'Pelayanan Publik'),
+(5, 'Fasilitas Umum');
 
 -- --------------------------------------------------------
 
@@ -87,11 +87,11 @@ CREATE TABLE `complaints` (
 --
 
 INSERT INTO `complaints` (`id`, `user_id`, `category_id`, `judul`, `isi`, `status`, `created_at`) VALUES
-(26, 3, 4, 'Jalan Rusak Depan Sekolah', 'Jalan utama depan sekolah rusak parah dan berlubang.', 'baru', '2026-01-03 18:03:40'),
-(27, 4, 5, 'Sampah Menumpuk', 'Sampah tidak diangkut selama lebih dari satu minggu.', 'diproses', '2026-01-03 18:03:40'),
-(28, 5, 6, 'Lampu Jalan Mati', 'Lampu jalan di area perumahan mati sejak lama.', 'baru', '2026-01-03 18:03:40'),
-(29, 6, 7, 'Pelayanan Lambat', 'Pelayanan di kantor kelurahan sangat lambat.', 'selesai', '2026-01-03 18:03:40'),
-(30, 7, 8, 'Toilet Umum Kotor', 'Toilet umum di taman kota sangat kotor.', 'diproses', '2026-01-03 18:03:40');
+(1, 1, 1, 'Jalan Rusak Depan Sekolah', 'Jalan utama depan sekolah rusak parah dan berlubang.', 'baru', '2026-01-03 18:03:40'),
+(2, 2, 2, 'Sampah Menumpuk', 'Sampah tidak diangkut selama lebih dari satu minggu.', 'diproses', '2026-01-03 18:03:40'),
+(3, 3, 3, 'Lampu Jalan Mati', 'Lampu jalan di area perumahan mati sejak lama.', 'baru', '2026-01-03 18:03:40'),
+(4, 4, 4, 'Pelayanan Lambat', 'Pelayanan di kantor kelurahan sangat lambat.', 'selesai', '2026-01-03 18:03:40'),
+(5, 5, 5, 'Toilet Umum Kotor', 'Toilet umum di taman kota sangat kotor.', 'diproses', '2026-01-03 18:03:40');
 
 -- --------------------------------------------------------
 
@@ -126,11 +126,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `nama`, `email`, `created_at`, `password`) VALUES
-(3, 'Andi Pratama', 'andi@gmail.com', '2026-01-03 16:32:52', '123'),
-(4, 'Budi Santoso', 'budi@gmail.com', '2026-01-03 16:32:52', '123'),
-(5, 'Citra Lestari', 'citra@gmail.com', '2026-01-03 16:32:52', '123'),
-(6, 'Dewi Anggraini', 'dewi@gmail.com', '2026-01-03 16:32:52', '123'),
-(7, 'Eko Saputra', 'eko@gmail.com', '2026-01-03 16:32:52', '123');
+(1, 'Andi Pratama', 'andi@gmail.com', '2026-01-03 16:32:52', '123'),
+(2, 'Budi Santoso', 'budi@gmail.com', '2026-01-03 16:32:52', '123'),
+(3, 'Citra Lestari', 'citra@gmail.com', '2026-01-03 16:32:52', '123'),
+(4, 'Dewi Anggraini', 'dewi@gmail.com', '2026-01-03 16:32:52', '123'),
+(5, 'Eko Saputra', 'eko@gmail.com', '2026-01-03 16:32:52', '123');
 
 --
 -- Indexes for dumped tables
@@ -184,13 +184,13 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `complaints`
 --
 ALTER TABLE `complaints`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `complaint_logs`
@@ -202,7 +202,7 @@ ALTER TABLE `complaint_logs`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
