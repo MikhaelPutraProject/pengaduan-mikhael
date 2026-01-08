@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Jika sudah login, langsung ke index
 if (isset($_SESSION['user_id'])) {
     header("Location: index.php");
     exit;
@@ -11,21 +10,19 @@ $error = "";
 $sukses = "";
 
 if (isset($_POST['nama'], $_POST['email'], $_POST['password'])) {
-    $nama = $_POST['nama'];
-    $email = $_POST['email'];
+    $nama     = $_POST['nama'];
+    $email    = $_POST['email'];
     $password = $_POST['password'];
 
-    // Cek email sudah ada
-    $cekUrl = "http://localhost/pengaduan/api.php/records/users?filter=email,eq,$email";
+    $cekUrl = "http://localhost/pengaduan/api.php?table=users&filter=email,eq,$email";
     $cekRes = json_decode(file_get_contents($cekUrl), true);
 
-    if (!empty($cekRes['records'])) {
+    if (!empty($cekRes)) {
         $error = "Email sudah terdaftar";
     } else {
-        // Simpan user baru
         $postData = json_encode([
-            "nama" => $nama,
-            "email" => $email,
+            "nama"     => $nama,
+            "email"    => $email,
             "password" => $password
         ]);
 
@@ -38,7 +35,11 @@ if (isset($_POST['nama'], $_POST['email'], $_POST['password'])) {
         ];
 
         $context = stream_context_create($opts);
-        file_get_contents("http://localhost/pengaduan/api.php/records/users", false, $context);
+        file_get_contents(
+            "http://localhost/pengaduan/api.php?table=users",
+            false,
+            $context
+        );
 
         $sukses = "Pendaftaran berhasil, silakan login";
     }

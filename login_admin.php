@@ -1,28 +1,28 @@
 <?php
 session_start();
 
-// Jika admin sudah login
 if (isset($_SESSION['admin_id'])) {
     header("Location: dashboard.php");
     exit;
 }
 
 $error = "";
+
 if (isset($_POST['username'], $_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $apiUrl = "http://localhost/pengaduan/api.php/records/admins?filter=username,eq,$username";
+    $apiUrl = "http://localhost/pengaduan/api.php?table=admins&filter=username,eq,$username";
     $response = file_get_contents($apiUrl);
     $data = json_decode($response, true);
 
-    if (!empty($data['records'])) {
-        $admin = $data['records'][0];
+    if (!empty($data)) {
+        $admin = $data[0];
 
-        // Password plain text (sengaja, untuk TA)
         if ($password === $admin['password']) {
             $_SESSION['admin_id'] = $admin['id'];
             $_SESSION['admin_username'] = $admin['username'];
+
             header("Location: dashboard.php");
             exit;
         } else {
@@ -33,6 +33,7 @@ if (isset($_POST['username'], $_POST['password'])) {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>

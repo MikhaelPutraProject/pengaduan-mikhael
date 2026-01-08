@@ -10,23 +10,31 @@ $message = "";
 
 $apiBase = "http://localhost/pengaduan/api.php";
 
-$categoriesJson = file_get_contents($apiBase . "/records/categories");
-$categoriesData = json_decode($categoriesJson, true);
-$categories = $categoriesData['records'] ?? [];
+$categoriesJson = file_get_contents(
+    $apiBase . "?table=categories"
+);
+
+$categories = json_decode($categoriesJson, true);
+
+if (!is_array($categories)) {
+    $categories = [];
+}
 
 if (isset($_POST['judul'])) {
     $data = [
-        "user_id" => $user_id,
+        "user_id"     => $user_id,
         "category_id" => $_POST['category_id'],
-        "judul" => $_POST['judul'],
-        "isi" => $_POST['isi'],
-        "status" => "baru"
+        "judul"       => $_POST['judul'],
+        "isi"         => $_POST['isi'],
+        "status"      => "baru"
     ];
 
-    $ch = curl_init($apiBase . "/records/complaints");
+    $ch = curl_init($apiBase . "?table=complaints");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        "Content-Type: application/json"
+    ]);
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
     curl_exec($ch);
     curl_close($ch);
@@ -34,6 +42,7 @@ if (isset($_POST['judul'])) {
     $message = "Pengaduan berhasil dikirim!";
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>

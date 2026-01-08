@@ -9,11 +9,16 @@ $user_id = $_SESSION['user_id'];
 $apiBase = "http://localhost/pengaduan/api.php";
 
 $complaintsJson = file_get_contents(
-    $apiBase . "/records/complaints?filter=user_id,eq,$user_id&order=created_at,desc"
+    $apiBase . "?table=complaints&filter=user_id,eq,$user_id&order=created_at,desc"
 );
-$complaintsData = json_decode($complaintsJson, true);
-$complaints = $complaintsData['records'] ?? [];
+
+$complaints = json_decode($complaintsJson, true);
+
+if (!is_array($complaints)) {
+    $complaints = [];
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -107,10 +112,15 @@ body {
     <?php foreach ($complaints as $c): ?>
         <?php
         $logsJson = file_get_contents(
-            $apiBase . "/records/complaint_logs?filter=complaint_id,eq," . $c['id']
+            $apiBase . "?table=complaint_logs&filter=complaint_id,eq," . $c['id']
         );
-        $logsData = json_decode($logsJson, true);
-        $logs = $logsData['records'] ?? [];
+        
+        $logs = json_decode($logsJson, true);
+        
+        // Pastikan logs array
+        if (!is_array($logs)) {
+            $logs = [];
+        }
 
         $statusColor = match ($c['status']) {
             'baru' => 'secondary',

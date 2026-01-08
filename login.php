@@ -10,20 +10,19 @@ if (isset($_SESSION['user_id'])) {
 $error = "";
 
 if (isset($_POST['email'], $_POST['password'])) {
-    $email = $_POST['email'];
+    $email    = $_POST['email'];
     $password = $_POST['password'];
 
-    // Panggil API
-    $apiUrl = "http://localhost/pengaduan/api.php/records/users?filter=email,eq,$email";
+    $apiUrl = "http://localhost/pengaduan/api.php?table=users&filter=email,eq,$email";
     $response = file_get_contents($apiUrl);
     $data = json_decode($response, true);
 
-    if (!empty($data['records'])) {
-        $user = $data['records'][0];
+    if (!empty($data)) {
+        $user = $data[0];
 
-        // CEK PASSWORD (plaintext)
+        // CEK PASSWORD (plaintext, sesuai TA)
         if ($password === $user['password']) {
-            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_id']   = $user['id'];
             $_SESSION['user_name'] = $user['nama'];
 
             header("Location: index.php");
@@ -36,6 +35,7 @@ if (isset($_POST['email'], $_POST['password'])) {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
