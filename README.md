@@ -96,11 +96,11 @@ menampilkan data, memperbarui status pengaduan, dan menghapus data.
 ### 📌 Contoh Endpoint API
 
 ```http
-POST   /api.php/records/complaints        # Create (Tambah Data)
-GET    /api.php/records/complaints        # Read (Lihat Semua Data)
-GET    /api.php/records/complaints/{id}   # Read (Lihat Detail Data)
-PUT    /api.php/records/complaints/{id}   # Update (Ubah Data)
-DELETE /api.php/records/complaints/{id}   # Delete (Hapus Data)
+POST   /api.php/?table=complaints        # Create (Tambah Data)
+GET    /api.php/?table=complaints        # Read (Lihat Semua Data)
+GET    /api.php/?table=complaints/{id}   # Read (Lihat Detail Data)
+PUT    /api.php/?table=complaints/{id}   # Update (Ubah Data)
+DELETE /api.php/?table=complaints/{id}   # Delete (Hapus Data)
 ```
 
 ## 🚀 Cara Pemasangan (Instalasi)
