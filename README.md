@@ -85,12 +85,20 @@ Database terdiri dari beberapa tabel utama berikut:
 
 ### 🔄 Konsep CRUD (Create, Read, Update, Delete)
 
-Pengelolaan data pengaduan dilakukan melalui endpoint:
+Pengelolaan data pengaduan dilakukan melalui endpoint API berbasis REST
+yang disediakan oleh file `api.php`.
 
-### Contoh endpoint API:
+API ini digunakan oleh aplikasi web untuk melakukan operasi tambah data,
+menampilkan data, memperbarui status pengaduan, dan menghapus data.
+
+---
+
+### 📌 Contoh Endpoint API
+
 ```http
 POST   /api.php/records/complaints        # Create (Tambah Data)
-GET    /api.php/records/complaints        # Read (Lihat Data)
+GET    /api.php/records/complaints        # Read (Lihat Semua Data)
+GET    /api.php/records/complaints/{id}   # Read (Lihat Detail Data)
 PUT    /api.php/records/complaints/{id}   # Update (Ubah Data)
 DELETE /api.php/records/complaints/{id}   # Delete (Hapus Data)
 ```
